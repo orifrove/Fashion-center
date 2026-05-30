@@ -1,18 +1,18 @@
 import { Metadata } from 'next'
-import { Sparkles } from 'lucide-react'
+import { StylistChat } from '@/components/stylist/stylist-chat'
 
 export const metadata: Metadata = { title: 'AI Stylist' }
 
 export default function StylistPage() {
   return (
-    <div className="flex flex-col items-center justify-center gap-4 py-24 text-center">
-      <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-violet-100 text-violet-600">
-        <Sparkles className="h-8 w-8" />
+    <div className="flex h-full flex-col space-y-4">
+      <div>
+        <h1 className="text-2xl font-bold tracking-tight">AI Stylist</h1>
+        <p className="mt-1 text-sm text-muted-foreground">
+          Your personal fashion advisor powered by AI
+        </p>
       </div>
-      <h1 className="text-2xl font-bold">AI Stylist</h1>
-      <p className="max-w-sm text-muted-foreground">
-        Your personal AI fashion advisor. Get recommendations, wardrobe analysis, and style tips.
-      </p>
+      <StylistChat />
     </div>
   )
 }
